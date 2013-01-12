@@ -1,0 +1,13 @@
+--- boost/python/detail/wrap_python.hpp	(revision 6850)
++++ boost/python/detail/wrap_python.hpp	(revision 6924)
+@@ -48,4 +48,10 @@
+ #endif
+ 
++# ifdef _POSIX_C_SOURCE
++#  undef _POSIX_C_SOURCE
++# endif
++# ifdef _XOPEN_SOURCE
++#  undef _XOPEN_SOURCE
++# endif
+ # include <pyconfig.h>
+ # if defined(_SGI_COMPILER_VERSION) && _SGI_COMPILER_VERSION >= 740
